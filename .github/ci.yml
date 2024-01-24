@@ -10,7 +10,7 @@ jobs:
 
   test:
     name: Test
-    runs-on: ubuntu-test
+    runs-on: ubuntu-latest
 
     services:
       postgres:
