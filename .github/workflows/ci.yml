@@ -2,15 +2,15 @@ name: ci-test
 
 on:
   push:
-    branches: [master]
+    branches: ["main"]
   pull_request:
-    branches: [master]
+    branches: ["main"]
 
 jobs:
 
   test:
     name: Test
-    runs-on: ubuntu-test
+    runs-on: ubuntu-latest
 
     services:
       postgres:
