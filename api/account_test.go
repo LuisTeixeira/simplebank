@@ -9,7 +9,6 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
-	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang/mock/gomock"
@@ -212,11 +211,10 @@ func TestCreateAccountAPI(t *testing.T) {
 
 func randomAccount() db.Account {
 	return db.Account{
-		ID:        util.RandomInt(1, 1000),
-		Owner:     util.RandomOwner(),
-		Balance:   util.RandomMoney(),
-		Currency:  util.RandomCurrency(),
-		CreatedAt: time.Now().Truncate(time.Second),
+		ID:       util.RandomInt(1, 1000),
+		Owner:    util.RandomOwner(),
+		Balance:  util.RandomMoney(),
+		Currency: util.RandomCurrency(),
 	}
 }
 
